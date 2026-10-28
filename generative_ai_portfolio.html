@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Musaddique Almel — Generative AI and Machine Learning portfolio." />
+  <title>Musaddique HASAN Almel | Generative AI Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090b12;--panel:#111522;--panel2:#151a2a;--text:#f3f5ff;--muted:#a3abc2;--line:rgba(255,255,255,.12);--cyan:#6fffe9;--violet:#a78bfa;--pink:#ff8ed4;--max:1160px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{font-family:Manrope,system-ui,sans-serif;background:radial-gradient(ellipse at 75% 0%,rgba(95,75,180,.18),transparent 35%),var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .mono{font-family:"DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase;font-size:.75rem;color:var(--cyan)}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(9,11,18,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:-.05em;font-size:1.18rem}.brand span{color:var(--cyan)}
+    .links{display:flex;gap:26px;align-items:center;color:var(--muted);font-size:.9rem}
+    .links a:hover,.links a.active{color:var(--cyan)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 12px}
+    .hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:50px;padding:80px 0 90px;position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#d9def2;font-size:.8rem;background:rgba(255,255,255,.025);margin-bottom:25px}
+    .dot{height:8px;width:8px;background:var(--cyan);border-radius:50%;box-shadow:0 0 18px var(--cyan)}
+    h1{font-size:clamp(3rem,7.2vw,6.3rem);line-height:.99;letter-spacing:-.075em;max-width:800px}
+    h1 .gradient{background:linear-gradient(100deg,var(--cyan),#9bb9ff 45%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:1.08rem;color:var(--muted);max-width:630px;margin:25px 0 30px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:13px 19px;font-weight:800;font-size:.9rem;border:1px solid var(--line);transition:transform .2s,border-color .2s,background .2s;cursor:pointer}
+    .btn:hover{transform:translateY(-3px);border-color:var(--cyan)}
+    .primary{background:var(--cyan);color:#081016;border-color:var(--cyan)}
+    .secondary{background:rgba(255,255,255,.03)}
+    .hero-art{min-height:420px;display:grid;place-items:center;position:relative}
+    .orb{width:min(360px,80vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 28%,#e5fffb 0%,#7cffe9 5%,#8d9aff 30%,#8b5cf6 52%,#19132f 72%);box-shadow:0 0 75px rgba(129,110,255,.26),inset -24px -30px 70px rgba(3,5,20,.7);position:relative;animation:float 6s ease-in-out infinite}
+    .orb:before,.orb:after{content:"";position:absolute;inset:-24px;border:1px solid rgba(111,255,233,.35);border-radius:50%;transform:rotate(-24deg) scaleY(.34)}
+    .orb:after{inset:-48px;border-color:rgba(167,139,250,.4);transform:rotate(42deg) scaleY(.25)}
+    .orbit-label{position:absolute;padding:12px 15px;border:1px solid var(--line);background:rgba(17,21,34,.85);backdrop-filter:blur(12px);border-radius:13px;font-family:"DM Mono",monospace;font-size:.75rem;box-shadow:0 10px 40px #0004}
+    .label-a{top:15%;left:0}.label-b{right:-2%;top:34%}.label-c{bottom:15%;left:10%}
+    @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-15px) rotate(4deg)}}
+    section{padding:92px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:36px}
+    h2{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.06em;line-height:1.1;margin-top:9px}
+    .section-head p{max-width:440px;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card{background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:22px;padding:27px}
+    .card h3{font-size:1.2rem;letter-spacing:-.03em;margin:8px 0 12px}
+    .card p{color:var(--muted)}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .stat{padding:17px 14px;border-radius:15px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+    .stat strong{display:block;font-size:1.25rem;color:var(--cyan)}.stat span{font-size:.75rem;color:var(--muted)}
+    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}
+    .chip{border:1px solid var(--line);padding:7px 11px;border-radius:999px;color:#dce2f6;font-size:.82rem;background:rgba(255,255,255,.025)}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{min-height:300px;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+    .project:hover{transform:translateY(-6px);border-color:rgba(111,255,233,.55)}
+    .project-icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:1.5rem;background:linear-gradient(135deg,rgba(111,255,233,.15),rgba(167,139,250,.2));border:1px solid var(--line);margin-bottom:22px}
+    .project p{font-size:.92rem}
+    .project .chips{margin-top:auto;padding-top:22px}
+    .project .chip{font-size:.72rem}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{padding:22px;border-top:2px solid var(--violet);background:rgba(255,255,255,.025);border-radius:0 0 16px 16px}
+    .step .num{font-family:"DM Mono",monospace;color:var(--cyan);font-size:.8rem}
+    .step h3{margin:12px 0 7px;font-size:1rem}.step p{font-size:.87rem;color:var(--muted)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+    .contact-card{padding:30px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(111,255,233,.07),rgba(167,139,250,.07))}
+    .contact-card p{color:var(--muted);margin:12px 0 24px}
+    .contact-links{display:grid;gap:10px}
+    .contact-links a{padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.12);display:flex;justify-content:space-between;gap:12px}
+    .contact-links a:hover{border-color:var(--cyan)}
+    .contact-form{display:grid;gap:13px}
+    .contact-form label{display:grid;gap:7px;color:var(--muted);font-size:.85rem}
+    .contact-form input,.contact-form textarea{width:100%;padding:13px 14px;border-radius:11px;border:1px solid var(--line);background:#0c101b;color:var(--text);font:inherit;outline:none}
+    .contact-form input:focus,.contact-form textarea:focus{border-color:var(--cyan)}
+    .contact-form textarea{min-height:130px;resize:vertical}
+    .note{font-size:.78rem;color:var(--muted)}
+    footer{padding:28px 0;color:var(--muted);font-size:.82rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:65px;gap:15px}.hero-art{min-height:330px}.orb{width:260px}.projects{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.about-grid,.contact-grid{grid-template-columns:1fr}}
+    @media(max-width:600px){.wrap{width:min(100% - 28px,var(--max))}.nav-inner{height:66px}.menu{display:block}.links{display:none;position:absolute;top:65px;left:0;right:0;padding:20px;background:#0b0e17;border-bottom:1px solid var(--line);flex-direction:column;gap:18px}.links.open{display:flex}.hero{min-height:auto;padding:70px 0 65px}.hero-art{min-height:290px}.label-a{left:-2%}.label-b{right:-2%}.label-c{left:0}section{padding:68px 0}.projects,.process-grid{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr 1fr 1fr}.card{padding:22px}h1{font-size:clamp(3rem,16vw,5rem)}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="Musaddique Almel home">MUSADDIQUE<span>.</span>ALMEL</a>
+      <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <nav class="links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="home" style="border-top:0">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> GENERATIVE AI · MACHINE LEARNING</div>
+        <h1>Building ideas<br>with <span class="gradient">intelligence.</span></h1>
+        <p>Hi, I'm <strong>Musaddique Almel</strong> — an MCA postgraduate and aspiring AI engineer exploring Generative AI, machine learning, and practical tools that make technology more useful.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+          <a class="btn secondary" href="#contact">Let's connect</a>
+        </div>
+        <p class="mono" style="margin-top:30px;margin-bottom:0">Curious mind · Practical builder · Lifelong learner</p>
+      </div>
+      <div class="hero-art" aria-label="Abstract glowing AI orb illustration">
+        <div class="orb"></div>
+        <div class="orbit-label label-a">Prompt → Idea</div>
+        <div class="orbit-label label-b">LLMs / RAG</div>
+        <div class="orbit-label label-c">Human-centered AI</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="mono">01 / ABOUT ME</div><h2>AI with a purpose.</h2></div><p>I enjoy learning how intelligent systems work and turning that knowledge into projects that solve real problems.</p></div>
+        <div class="about-grid">
+          <article class="card reveal">
+            <div class="mono">MY STORY</div><h3>From code to intelligent experiences</h3>
+            <p>With a postgraduate background in computer applications and hands-on exposure to AI/ML, I'm building my foundation across Python, data, machine learning, and emerging Generative AI workflows. I'm excited to keep learning, experiment responsibly, and contribute to a collaborative engineering team.</p>
+          </article>
+          <article class="card reveal">
+            <div class="mono">CURRENT FOCUS</div><h3>Learning by building</h3>
+            <p>My focus is on understanding LLM applications, prompt design, retrieval-augmented generation (RAG), evaluation, and how AI products can be made helpful, reliable, and clear for users.</p>
+            <div class="stat-row"><div class="stat"><strong>AI/ML</strong><span>Core interest</span></div><div class="stat"><strong>Python</strong><span>Build & experiment</span></div><div class="stat"><strong>RAG</strong><span>Learning focus</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="mono">02 / TOOLKIT</div><h2>Skills in progress.</h2></div><p>A growing toolkit across programming, data, machine learning, and Generative AI concepts.</p></div>
+        <div class="card reveal">
+          <h3>Programming & data</h3><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Java</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
+          <h3 style="margin-top:26px">AI & machine learning</h3><div class="chips"><span class="chip">Machine Learning</span><span class="chip">NLP</span><span class="chip">Data Preprocessing</span><span class="chip">Model Evaluation</span><span class="chip">Computer Vision</span></div>
+          <h3 style="margin-top:26px">Generative AI learning path</h3><div class="chips"><span class="chip">LLMs</span><span class="chip"></span><span class="chip">Embeddings</span><span class="chip">Vector Search</span><span class="chip">RAG</span><span class="chip">AI Evaluation</span><span class="chip">Responsible AI</span></div>
+          <p class="note" style="margin-top:18px">The Generative AI topics above represent areas of focus and learning. Update this section as you gain project experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="mono">03 / SELECTED WORK</div><h2>Projects & experiments.</h2></div><p>A selection of AI/ML project directions. Replace the descriptions and links with your final repository demos as you publish them.</p></div>
+        <div class="projects">
+          <article class="card project reveal"><div class="project-icon">✳</div><div class="mono">NLP / MACHINE LEARNING</div><h3>Frustration Detection in Reviews</h3><p>Analyze review text to identify frustration signals and explore how NLP features and classification models can help summarize user sentiment.</p><div class="chips"><span class="chip">Python</span><span class="chip">NLP</span><span class="chip">Classification</span></div></article>
+          <article class="card project reveal"><div class="project-icon">◈</div><div class="mono">COMPUTER VISION</div><h3>Skin Disease AI — Learning Project</h3><p>Explore image preprocessing and model evaluation for a computer-vision classifier. Intended for learning and not for medical diagnosis.</p><div class="chips"><span class="chip">Python</span><span class="chip">TensorFlow</span><span class="chip">Computer Vision</span></div></article>
+          <article class="card project reveal"><div class="project-icon">⌘</div><div class="mono">GENERATIVE AI / CONCEPT</div><h3>Document Q&A Assistant</h3><p>A portfolio-ready concept: upload reference documents, retrieve relevant passages, and generate grounded answers with source references using an LLM and RAG.</p><div class="chips"><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">Embeddings</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="mono">04 / HOW I WORK</div><h2>Small steps. Useful outcomes.</h2></div><p>A simple workflow for taking an AI idea from question to a testable prototype.</p></div>
+        <div class="process-grid">
+          <article class="step reveal"><div class="num">STEP 01</div><h3>Understand</h3><p>Define the user problem, constraints, and what a useful result looks like.</p></article>
+          <article class="step reveal"><div class="num">STEP 02</div><h3>Explore data</h3><p>Review source material, prepare data, and choose a sensible baseline.</p></article>
+          <article class="step reveal"><div class="num">STEP 03</div><h3>Build & test</h3><p>Prototype, evaluate outputs, inspect failure cases, and improve iteratively.</p></article>
+          <article class="step reveal"><div class="num">STEP 04</div><h3>Share clearly</h3><p>Document limitations, explain decisions, and make the project easy to try.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="mono">05 / CONTACT</div><h2>Let's build something.</h2></div><p>Open to entry-level opportunities, internships, AI projects, and conversations with people building useful technology.</p></div>
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <div class="mono">GET IN TOUCH</div><h3 style="font-size:1.6rem;margin-top:10px">Have an idea or opportunity?</h3>
+            <p>Send a message or connect with me through your professional profiles.</p>
+            <div class="contact-links">
+              <!-- Replace the placeholder links below with your real profiles. -->
+              <a href="mailto:YOUR_EMAIL@example.com"><span>Email me</span><span>↗</span></a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><span>LinkedIn profile</span><span>↗</span></a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><span>GitHub projects</span><span>↗</span></a>
+            </div>
+            <p class="note" style="margin-bottom:0">Before publishing, replace the email and profile URLs with your own.</p>
+          </div>
+          <form class="card contact-form reveal" id="contactForm">
+            <h3>Write a message</h3>
+            <label>Your name<input name="name" autocomplete="name" required placeholder="Enter your name"></label>
+            <label>Your email<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+            <label>Message<textarea name="message" required placeholder="Tell me a little about your idea..."></textarea></label>
+            <button class="btn primary" type="submit">Prepare email ↗</button>
+            <p class="note">This form opens your default email app; it does not send or store messages on a server.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Musaddique Almel</span><span>Designed for curiosity. Built for the future of AI.</span><a href="#home">Back to top ↑</a></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    document.getElementById('contactForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const name = String(data.get('name')).trim();
+      const email = String(data.get('email')).trim();
+      const message = String(data.get('message')).trim();
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      window.location.href = 'mailto:YOUR_EMAIL@example.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
